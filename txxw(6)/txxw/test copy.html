@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <title>腾讯首页</title>
+  <link rel="stylesheet" href='./test.css' charset="utf-8">
+  <style>
+    #skin-close {
+      display: none;
+    }
+
+    /* .qq-body-skin{
+      background-color: #d20001!important;
+    } */
+    .qq-body-skin .layout {
+      margin-bottom: 0;
+      padding-bottom: 20px;
+    }
+
+    .qq-body-skin .qq-skin,
+    .qq-body-skin .qq-top {
+      padding-bottom: 0;
+    }
+
+    .garyBody {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      -webkit-filter: grayscale(1);
+    }
+
+    .iebrowser {
+      background-color: #ddd;
+      opacity: 0.5;
+      filter: Alpha(opacity=50);
+    }
+
+    .iebrowser .qq-nav .nav-mod {
+      background-color: #b0b0b1 !important;
+    }
+
+    .iebrowser .searchBtn {
+      background-color: #b0b0b1 !important;
+    }
+
+    .iebrowser .mod .hd .tit.active a {
+      display: inline-block !important;
+      color: #161617 !important;
+      border-bottom: 4px solid #212121 !important;
+    }
+
+    .iebrowser .mod .bd .cate {
+      color: #212222 !important;
+    }
+
+    .iebrowser a:hover {
+      color: #030303 !important;
+    }
+
+    .p1t {
+      overflow: hidden;
+    }
+
+    .p1t img {
+      width: auto;
+      margin-left: -9px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="global">
+
+    <!-- 大皮肤 -->
+    <div id="big-skin" class="layout qq-skin"></div>
+    <!-- /大皮肤 -->
+
+    <!-- 头部 -->
+    <div class="layout qq-top cf" bossexpo="bg_top">
+
+      <h1 class="top-logo fl">
+        <a href="/" target="_blank" bosszone="top_logo">
+          <img width="100%" src="./img/qq_logo_2x.png" alt="腾讯网">
+        </a>
+      </h1>
+
+      <!-- 小皮肤 -->
+      <div id="small-skin" class="skin-min fl"></div>
+      <!-- /小皮肤 -->
+
+      <!-- 搜索 -->
+      <div class="top-search fl" id="sosobar" role="search" bosszone="top_search">
+        <form id="searchForm" method="get" name="soso_search_box" target="_blank">
+          <div id="searchTxt" class="searchTxt">
+            <input type="hidden" value="w.q.in.sb.web" name="cid" />
+            <div class="searchMenu fl">
+              <div class="searchSelected" id="searchSelected">网页</div>
+              <div class="searchTab" id="searchTab">
+                <ul></ul>
+              </div>
+            </div>
+            <input id="sougouTxt" type="text" value="" name="w" aria-label="请输入搜索文字" />
+            <div class="searchSmart" id="searchSmart" style="display:none;">
+              <ul></ul>
+            </div>
+            <div class="fr">
+              <button id="searchBtn" class="searchBtn" type="submit">搜狗搜索</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- /搜索 -->
+
+      <!-- 登录 -->
+      <div id="top-login" class="top-login fr">
+        <div class="item item-qzone fl">
+          <a href="https://qzone.qq.com" class="q-icons l-qzone" target="_blank" bosszone="top_qzone">Qzone</a>
+          <div class="pop">
+            <i class="arr-icon"></i>
+            <a class="txt" href="https://qzone.qq.com" target="_blank" bosszone="top_qzone">点击查看QQ空间</a>
+          </div>
+        </div>
+        <div class="item item-qmail fl">
+          <a href="https://mail.qq.com" class="q-icons l-qmail" target="_blank" bosszone="top_mail">Qmail</a>
+          <div class="pop">
+            <i class="arr-icon"></i>
+            <a class="txt" href="https://mail.qq.com/cgi-bin/loginpage" target="_blank" bosszone="top_mail">点击查看QQ邮箱</a>
+          </div>
+        </div>
+        <div class="item item-login fl">
+          <a class="l-login" href="javascript:;" onclick="userLogin()" bosszone="top_login">登录</a>
+          <div class="pop">
+            <i class="arr-icon"></i>
+            <div class="nick">你好，</div>
+            <a class="loginout" href="javascript:;" onclick="login.loginOut()" bosszone="top_login">[退出登录]</a>
+          </div>
+        </div>
+      </div>
+      <!-- /登录 -->
+      <!--515e8a9b2bd0d8267501d39b452aab86-->
+      <!--[if !IE]>|xGv00|5a4447b21df6aecffe06d861a91af412<![endif]-->
+
+    </div>
+    <!-- /头部 -->
+
+    <!-- 导航 -->
+    <!-- <div class="layout qq-nav">
+      <div class="nav-mod cf">
+        <style type="text/css">
+          .qq-nav .nav-mod .nav-item {
+            white-space: nowrap;
+          }
+        </style>
+
+        <ul class="nav-main fl" bossexpo="bg_dh_1">
+          <li class="nav-item">
+            <a href="http://news.qq.com/" target="_blank" bosszone="dh_1">新闻</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://v.qq.com/" target="_blank" bosszone="dh_2">视频</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://new.qq.com/ch/photo/" target="_blank" bosszone="dh_3">图片</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/milite/" target="_blank" bosszone="dh_4">军事</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sports.qq.com/" target="_blank" bosszone="dh_5">体育</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sports.qq.com/nba/" target="_blank" bosszone="dh_6">NBA</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/ent/" target="_blank" bosszone="dh_7">娱乐</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/finance" target="_blank" bosszone="dh_8">财经</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/tech/" target="_blank" bosszone="dh_9">科技</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/fashion/" target="_blank" bosszone="dh_10">时尚</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://auto.qq.com/" target="_blank" bosszone="dh_11">汽车</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://house.qq.com/" target="_blank" bosszone="dh_12">房产</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/edu/" target="_blank" bosszone="dh_13">教育</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/cul/" target="_blank" bosszone="dh_14">文化</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/astro" target="_blank" bosszone="dh_15">星座</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://new.qq.com/ch/games" target="_blank" bosszone="dh_16">游戏</a>
+          </li>
+        </ul>
+        <!--ecff6c717aac221b829a9b68fa57da9e-->
+        <!--[if !IE]>|xGv00|a35f3bdf6556fa101d70300c7270e7f2<![endif]-->
+        <div class="nav-more fl">
+          <div class="more-txt" bosszone="dh_more">更多</div>
+          <div class="nav-sub" bossexpo="bg_dh_2">
+            <ul class="sub-list cf">
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/society/" target="_blank" bosszone="dh_1_2">百态</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://v.qq.com/tv/" target="_blank" bosszone="dh_2_2">热剧</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/antip/" target="_blank" bosszone="dh_3_2">抗肺炎</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://new.qq.com/ch/history/" target="_blank" bosszone="dh_4_2">历史</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://sports.qq.com/premierleague/" target="_blank" bosszone="dh_5_2">英超</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://sports.qq.com/cba/" target="_blank" bosszone="dh_6_2">CBA</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch2/star" target="_blank" bosszone="dh_7_2">明星</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://money.qq.com/" target="_blank" bosszone="dh_8_2">理财</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/kepu/" target="_blank" bosszone="dh_9_2">科普</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://health.qq.com/" target="_blank" bosszone="dh_10_2">健康</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://auto.qq.com/" target="_blank" bosszone="dh_11_2">车型</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://www.jia360.com" target="_blank" bosszone="dh_12_2">家居</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/baby/" target="_blank" bosszone="dh_13_2">育儿</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/sv1/jumpXP.html" target="_blank" bosszone="dh_14_2">拍卖</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/comic/" target="_blank" bosszone="dh_15_2">动漫</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://gongyi.qq.com/" target="_blank" bosszone="dh_16_2">公益</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://tianqi.qq.com/index.htm" target="_blank" bosszone="dh_17_2">天气</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/politics/" target="_blank" bosszone="dh_18_2">政务</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://v.qq.com/channel/variety" target="_blank" bosszone="dh_19_2">综艺</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://news.qq.com/photon/photoex.htm" target="_blank" bosszone="dh_20_2">影展</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/world/" target="_blank" bosszone="dh_21_2">国际</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://sports.qq.com/csocce/csl/" target="_blank" bosszone="dh_22_2">中超</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://fans.sports.qq.com/#/" target="_blank" bosszone="dh_23_2">社区</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://v.qq.com/movie/" target="_blank" bosszone="dh_24_2">电影</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://stock.qq.com/" target="_blank" bosszone="dh_25_2">证券</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://digi.tech.qq.com/" target="_blank" bosszone="dh_26_2">数码</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch2/makeup" target="_blank" bosszone="dh_27_2">美容</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/visit/" target="_blank" bosszone="dh_28_2">旅游</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/life/" target="_blank" bosszone="dh_29_2">生活</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://kid.qq.com/" target="_blank" bosszone="dh_30_2">儿童</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://book.qq.com/" target="_blank" bosszone="dh_31_2">文学</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/omv/" target="_blank" bosszone="dh_32_2">享看</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://new.qq.com/ch/cul_ru" target="_blank" bosszone="dh_33_2">新国风</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://www.qq.com/map/" target="_blank" bosszone="dh_34_2">全部</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--df17dcec012f1e9ea76081c66aef0227-->
+        <!--[if !IE]>|xGv00|94874da82094fe209c230736578b9910<![endif]-->
+      </div>
+    </div>
+    <!-- /导航 -->
+
+    <!-- 广告1 -->
+    <div class="layout qq-gg gg-1 cf">
+      <div class="col-1 fl">
+        <!--NEW_QQCOM_N_Width1_div AD begin...."l=NEW_QQCOM_N_Width1&log=off"-->
+        <div id="NEW_QQCOM_N_Width1" style="width:920px;height:75px;" class="l_qq_com">
+          <img src="./img/920x75_www.png"></div>
+        <!--NEW_QQCOM_N_Width1 AD end -->
+        <!--[if !IE]>|xGv00|5aeb88a89c01e5641c5589dce242c026<![endif]-->
+      </div>
+      <!-- <div class="col-2 fr">
+        <div id="gg-focus1" class="gg-focus">
+          <ul class="list">
+            <li class="item">
+              <a href="http://www.shdf.gov.cn/shdf/channels/740.html" target="_blank">
+                <img src="//img1.gtimg.com/ninja/2/2020/06/ninja159334882913158.png" alt="中国扫黄打非网举报入口">
+              </a>
+            </li>
+            <li class="item">
+              <a href="http://www.qq.com/jubaoxuzhi.htm" target="_blank">
+                <img src="http://mat1.gtimg.com/pingjs/ext2020/test2017/netwatch.png" alt="网络监控">
+              </a>
+            </li>
+            <li class="item">
+              <a href="https://110.qq.com/" target="_blank">
+                <img src="http://img1.gtimg.com/ninja/2/2018/10/ninja153907290259802.png" alt="腾讯101">
+              </a>
+            </li>
+            <li class="item">
+              <a href="http://www.12377.cn/" target="_blank">
+                <img src="http://img1.gtimg.com/ninja/2/2018/10/ninja153907291410277.png" alt="网上有害信息举报">
+              </a>
+            </li>
+          </ul>
+          <div class="dot"></div>
+        </div>
+      </div> -->
+    </div>
+    <!-- /广告1 -->
+
+    <!-- 要闻
+    <div class="layout qq-main cf">
+      <div class="col col-1 fl">
+
+        <div id="main-news" class="mod m-news">
+
+          <div class="hd cf">
+            <h2 class="tit active fl"><a href="//news.qq.com" target="_blank" bosszone="yw_logo">要闻</a></h2>
+            <span class="tit-line fl"></span>
+            <h2 class="tit fl"><a href="//new.qq.com/ch/antip/" target="_blank" bosszone="antip_logo">抗肺炎</a></h2>
+            <span class="tit-line fl" style="display:none"></span>
+            <h2 class="tit fl"></h2>
+            <div id="m-weather" class="m-weather f14 fr">
+              <a id="weaher-info" href="https://tianqi.qq.com/" target="_blank">
+                <div id="ipWeather" class="w-city fl"></div>
+                <div id="weatherIcon" class="w-icon fl"></div>
+                <div id="weatherTemperature" class="w-du fl"></div>
+              </a>
+
+              <div id="weatherMore" class="weather-more">
+
+                <!-- 天气详情 -->
+                <div class="face front">
+                  <div class="weatherMoreTitle cf">
+                    <div class="weather-info fl">
+                      <a id="weatherMoreLink" href="https://tianqi.qq.com/" target="_blank">
+                        <span id="weatherMoreCity"></span>
+                        <span id="weatherMoreTxt"></span>
+                        <span id="weatherMoreTem"></span>
+                      </a>
+                    </div>
+                    <div class="weatherMoreSet fr" id="weatherMoreSet">
+                      <a href="javascript:void(0);">更换城市</a>
+                    </div>
+                  </div>
+                  <div class="weatherMoreAir">
+                    <a id="weatherMoreAirLink" href="https://tianqi.qq.com/" target="_blank">
+                      空气质量：<span id="weatherMoreAirTxt" style="padding-right:20px;"></span>
+                      PM2.5：<span id="weatherMoreAirPmTxt"></span>
+                    </a>
+                  </div>
+                  <a id="weatherMoreFuture" class="weatherMoreFuture cf" href="https://tianqi.qq.com/" target="_blank">
+                    <div class="weatherMoreFutureCon">
+                      <div class="weatherMoreIcon w-icon" id="weatherMoreTodayIcon"></div>
+                      <p><strong>今天</strong></p>
+                      <p>
+                        <span id="weatherMoreTodayHighest" class="weatherMoreMath">-</span>℃ -
+                        <span id="weatherMoreTodayLowest" class="weatherMoreMathLow">-</span>
+                        <span class="weatherMoreSign">℃</span>
+                      </p>
+                    </div>
+                    <div class="weatherMoreFutureCon">
+                      <div class="weatherMoreIcon w-icon" id="weatherMoreTomorrowIcon"></div>
+                      <p><strong>明天</strong></p>
+                      <p>
+                        <span id="weatherMoreTomorrowHighest" class="weatherMoreMath">-</span>℃ -
+                        <span id="weatherMoreTomorrowLowest" class="weatherMoreMathLow">-</span>
+                        <span class="weatherMoreSign">℃</span></p>
+                    </div>
+                    <div class="weatherMoreFutureCon">
+                      <div class="weatherMoreIcon w-icon" id="weatherMoreAfterTomorrowIcon"></div>
+                      <p><strong>后天</strong></p>
+                      <p>
+                        <span id="weatherMoreAfterTomorrowHighest" class="weatherMoreMath">-</span>℃ -
+                        <span id="weatherMoreAfterTomorrowLowest" class="weatherMoreMathLow">-</span>
+                        <span class="weatherMoreSign">℃</span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <!-- /天气详情 -->
+
+                <!-- 城市设置 -->
+                <!-- <div class="face back">
+                  <div class="weatherMoreTitle cf">
+                    <div class="fl">
+                      <span>设置城市</span>
+                    </div>
+                    <a href="javascript:void(0);" id="weatherMoreReset" class="weatherMoreReset">恢复默认城市</a>
+                  </div>
+                  <div class="weatherMoreSelectLayout cf">
+                    <div class="weatherMoreProviceLayout fl">
+                      <div class="weatherMoreProviceDefault" id="ipSetProvince">北京市</div>
+                      <div class="weatherMoreProviceSelect" id="weatherMoreProviceSelect">
+                        <ul>
+                          <li><a href="javascript:void(0);">北京市</a></li>
+                          <li><a href="javascript:void(0);">上海市</a></li>
+                          <li><a href="javascript:void(0);">天津市</a></li>
+                          <li><a href="javascript:void(0);">重庆市</a></li>
+                          <li><a href="javascript:void(0);">河北省</a></li>
+                          <li><a href="javascript:void(0);">山西省</a></li>
+                          <li><a href="javascript:void(0);">内蒙古</a></li>
+                          <li><a href="javascript:void(0);">江苏省</a></li>
+                          <li><a href="javascript:void(0);">安徽省</a></li>
+                          <li><a href="javascript:void(0);">山东省</a></li>
+                          <li><a href="javascript:void(0);">辽宁省</a></li>
+                          <li><a href="javascript:void(0);">吉林省</a></li>
+                          <li><a href="javascript:void(0);">黑龙江省</a></li>
+                          <li><a href="javascript:void(0);">浙江省</a></li>
+                          <li><a href="javascript:void(0);">江西省</a></li>
+                          <li><a href="javascript:void(0);">福建省</a></li>
+                          <li><a href="javascript:void(0);">湖北省</a></li>
+                          <li><a href="javascript:void(0);">湖南省</a></li>
+                          <li><a href="javascript:void(0);">河南省</a></li>
+                          <li><a href="javascript:void(0);">广东省</a></li>
+                          <li><a href="javascript:void(0);">广西</a></li>
+                          <li><a href="javascript:void(0);">海南省</a></li>
+                          <li><a href="javascript:void(0);">四川省</a></li>
+                          <li><a href="javascript:void(0);">贵州省</a></li>
+                          <li><a href="javascript:void(0);">云南省</a></li>
+                          <li><a href="javascript:void(0);">西藏</a></li>
+                          <li><a href="javascript:void(0);">陕西省</a></li>
+                          <li><a href="javascript:void(0);">甘肃省</a></li>
+                          <li><a href="javascript:void(0);">宁夏</a></li>
+                          <li><a href="javascript:void(0);">青海省</a></li>
+                          <li><a href="javascript:void(0);">新疆</a></li>
+                          <li><a href="javascript:void(0);">香港</a></li>
+                          <li><a href="javascript:void(0);">澳门</a></li>
+                          <li><a href="javascript:void(0);">台湾省</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="weatherMoreCityLayout fl">
+                      <div class="weatherMoreCityDefault" id="ipSetCity">北京市</div>
+                      <div class="weatherMoreCitySelect" id="weatherMoreCitySelect">
+                        <ul id="weatherMoreCitySelectUl">
+                          <li><a href="javascript:void(0);">北京市</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="weatherMoreNews">
+                    <div id="weatherMoreNewsCheckbox" class="weatherMoreNewsCheckbox weatherMoreNewsYes">同时更新资讯所属地</div>
+                  </div>
+                  <div class="weatherMoreBtn">
+                    <input type="button" value="确定" id="weatherMoreSubmit" class="weatherMoreSubmit" />
+                    <input type="button" value="取消" id="weatherMoreCancel" class="weatherMoreCancel" />
+                  </div>
+                </div>
+                <!-- /城市设置 -->
+
+              </div>
+            </div>
+            <!--87dd1c20ecef276c7c41a49ad09c3aa9-->
+            <!--[if !IE]>|xGv00|649f4a5728d5a2f0ee5e39c7f629214a<![endif]-->
+          </div>
+          <div class="bd">
+
+            <!-- 要闻 -->
+            <div id="tab-news-01" class="tab-news" bossexpo="bg_yw">
+              <style>
+                .bgcolor1 {
+                  background: #f56300;
+                  color: #FFF;
+                  padding: 0 3px;
+                  border-radius: 3px;
+                }
+
+                .bgcolor1:hover { -->
+                  color: #FFF;
+                }
+
+                li.news-top-first {
+                  height: 36px;
+                  text-indent: -2222px;
+                }
+              </style>
+              <ul class="yw-list" bosszone="yw_1">
+                <li class="news-top ">
+                  <a class=" bold" href="https://new.qq.com/omn/20201104/20201104A0BQEI00.html" target="_blank"
+                    newsexpo="yw1_1">东方之约，“桥”见进博</a>
+                </li>
+                <li class=" ">
+                  <a style="" class="" href="https://new.qq.com/omn/20201104/20201104A02E2Y00.html" target="_blank"
+                    data-icon="no-icon" newsexpo="yw2_1">习近平始终关切这片热土</a> <a style="" class=""
+                    href="https://new.qq.com/omn/20201103/20201103A0HOIQ00.html" target="_blank" data-icon="no-icon"
+                    newsexpo="yw2_2">进博会上曾宣布的举措这样落实</a> </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A027GX00.html" target="_blank"
+                    newsexpo="yw3_1">习近平将出席上海合作组织成员国元首理事会会议</a>
+                </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A0AHPV00.html" target="_blank"
+                    newsexpo="yw4_1">科学规划“十四五” 九方面勾画2035年远景目标</a>
+                </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A00KRP00.html" target="_blank"
+                    newsexpo="yw5_1">“老友新朋”乘风破浪再相聚 期待进博会共享中国商机</a>
+                </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/TWF20201/TWF2020110401318400.html" target="_blank"
+                    newsexpo="yw6_1">【实践新论】高质量就业是新就业形态的未来</a>
+                </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104V06OF800.html" target="_blank"
+                    newsexpo="yw7_1">江湛铁路开通两年 粤西群众“幸福满满”</a>
+                </li>
+                <li class=" ">
+                  <a class="" href="https://new.qq.com/omn/20201103/20201103A0H2K700.html" target="_blank"
+                    newsexpo="yw8_1">外交部：再次敦促美方停止对中国记者政治迫害和打压</a>
+                </li>
+              </ul>
+              <!--b1a79f7d000318ced17a680fff775e73-->
+              <!--[if !IE]>|xGv00|1711bc2d1c1cb124faf7cf23205cb358<![endif]-->
+              <style type="text/css">
+                .news_color_3 {
+                  color: #0c82ff !important;
+                }
+
+                .news_color_4 {
+                  color: #df5147 !important;
+                }
+              </style>
+
+              <ul class="yw-list" bosszone="yw_2">
+                <li class="news-pic-txt cf">
+                  <div class="pic fl">
+                    <a href="https://new.qq.com/omn/20201104/20201104A01IFD00.html" target="_blank" newsexpo="yw9_1">
+                      <img src="./img/4.png" alt="杂交水稻双季亩产再破纪录 亩产1500公斤意味着什么">
+                    </a>
+                  </div>
+                  <div class="txt fl">
+                    <a href="https://new.qq.com/omn/20201104/20201104A01IFD00.html" target="_blank"
+                      newsexpo="yw9_1">杂交水稻双季亩产再破纪录 亩产1500公斤意味着什么</a>
+                    <div class="info">
+                      <a href="https://new.qq.com/omn/20201104/20201104A01IFD00.html" target="_blank">
+
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A0099L00.html" target="_blank"
+                    newsexpo="yw10_1">美国总统大选日到来 军队已提前准备就绪</a> <a class=""
+                    href="https://new.qq.com/omn/20201104/20201104A02XLC00.html" target="_blank"
+                    newsexpo="yw10_2">五大看点</a> </li>
+                <li>
+                  <a class="q-icons icon-video" href="https://new.qq.com/omn/20201104/20201104V00X0400.html"
+                    target="_blank" newsexpo="yw11_1">特朗普称不会宣布提前获胜：坚信自己“稳赢”</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A01KIH00.html" target="_blank"
+                    newsexpo="yw12_1">“中国侵占尼泊尔领土修建建筑”？尼外交部也否认：不实！</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A02TU100.html" target="_blank"
+                    newsexpo="yw13_1">菅义伟问福岛核污水能不能喝 工作人员回应亮了</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A010QW00.html" target="_blank"
+                    newsexpo="yw14_1">阿联酋总理接种中国新冠疫苗 该国数十内阁高官已接种</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A011SQ00.html" target="_blank"
+                    newsexpo="yw15_1">德媒：美国打压中国科技可能适得其反</a>
+                </li>
+              </ul>
+              <ul class="yw-list" bosszone="yw_3">
+                <li class="news-pic-txt cf">
+                  <div class="pic fl">
+                    <a target="_blank" newsexpo="yw16_1">
+                      <img src="./img/1.png" alt="各地新冠疫苗何时可以接种？湖南最早年底、江西预计12月">
+                    </a>
+                  </div>
+                  <div class="txt fl">
+                    <a href="https://new.qq.com/omn/20201104/20201104A02WFG00.html" target="_blank"
+                      newsexpo="yw16_1">各地新冠疫苗何时可以接种？湖南最早年底、江西预计12月</a>
+                    <div class="info">
+                      <a href="https://new.qq.com/omn/20201104/20201104A02WFG00.html" target="_blank">
+
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A011SH00.html" target="_blank"
+                    newsexpo="yw17_1">林郑月娥北上与中央讨论香港发展 曾透露这次行程相当丰富</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201103/20201103A0IKJF00.html" target="_blank"
+                    newsexpo="yw18_1">国务院督查组：7个月未能证明“我爸是我爸”问题非偶然</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A03LL700.html" target="_blank"
+                    newsexpo="yw19_1">蔡办“感谢”美售台无人机 网友吐槽：买那样贵，还要谢</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201104/20201104A00K1F00.html" target="_blank"
+                    newsexpo="yw20_1">俄媒：浙江将建世界最长海底高铁隧道 总投资将超40亿美元</a>
+                </li>
+                <li>
+                  <a class="" href="https://new.qq.com/omn/20201103/20201103A0HMMT00.html" target="_blank"
+                    newsexpo="yw21_1">他们用生命书写脱贫攻坚变革奇迹 致敬平凡英雄</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /要闻 -->
+          </div>
+        </div>
+      </div>
+      <div class="col col-2 fl">
+
+        <!-- 今日话题 -->
+        <div class="mod m-topic" bossexpo="bg_jrht">
+          <div class="hd cf">
+            <h2 class="tit active"><a bosszone="jrht_logo">今日话题</a></h2>
+          </div>
+          <div class="bd">
+            <ul class="news-list">
+              <li class="news-top" bosszone="jrht_1">
+                <a href="https://new.qq.com/rain/a/20201103A0HJCX00" target="_blank">核查线索、展开暗访！全国扫黑办再有大动作</a>
+              </li>
+              <li bosszone="jrht_2">
+                <a class="cate" href="https://new.qq.com/omn/author/58" target="_blank">央视新闻</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201030/20201104A02G4H00.html" target="_blank">爸爸这个行为，引全网点赞</a>
+              </li>
+              <li bosszone="jrht_3">
+                <a class="cate" href="https://new.qq.com/omn/author/1051" target="_blank">人民日报</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201031/20201104A017KI00.html" target="_blank">直播带货快速发展中也需更为规范</a>
+              </li>
+              <li bosszone="jrht_4">
+                <a class="cate" href="https://new.qq.com/omn/author/9206757" target="_blank">光明时评</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201030/20201103A0G1NA00.html" target="_blank">小区“人脸识别”立法，开了个好头</a>
+              </li>
+              <li bosszone="jrht_5">
+                <a class="cate" href="https://new.qq.com/omn/author/3285" target="_blank">棱镜</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201030/20201103A07GG300.html"
+                  target="_blank">网络小贷迎来最强监管，八成公司恐将面临转型或淘汰</a>
+              </li>
+              <li bosszone="jrht_6">
+                <a class="cate" href="https://new.qq.com/omn/author/32" target="_blank">贵圈</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201030/20201102A01IRW00.html" target="_blank">花639万买一首歌的cp粉到底在想什么</a>
+              </li>
+              <li bosszone="jrht_7">
+                <a class="cate" href="https://new.qq.com/omn/author/5107513" target="_blank">较真</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/omn/20201031/20201103A05RUG00.html"
+                  target="_blank">家庭常备药布洛芬副作用大不能用？这是真的吗</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mod m-yao13" bossexpo="bg_ycsp">
+          <!-- <div class="hd-2 cf" style="height:50px;">
+            <h2 class="tit active">
+              <a href="http://v.qq.com/detail/8/88846.html" target="_blank" bosszone="ycsp_logo">
+                <img src="//mat1.gtimg.com/news/experience/dianfeng3" alt="巅锋">
+              </a>
+            </h2>
+          </div> -->
+          <div class="bd" style="margin-top:-14px;">
+            <ul class="news-list">
+              <li class="news-pic-txt cf" bosszone="ycsp_2">
+                <div class="pic video-box click-drag-play fl" bossvv="vv_ycsp">
+                  <img src="./img/10.png" alt="杨超越自曝在北京不敢上街怕认出 上海认识的人少">
+                  <i class="q-icons icon-play2"></i>
+                  <div class="txt undis">杨超越自曝在北京不敢上街怕认出 上海认识的人少</div>
+                  <div class="desc undis">b3200fyrxfu</div>
+                  <div id="mod-player4" class="mod-player" data-vid="b3200fyrxfu"
+                    data-url="https://v.qq.com/x/cover/mzc00200fl55n8n/b3200fyrxfu.html" style="display: none;"></div>
+                  <div class="click-layer"></div>
+                </div>
+                <div class="txt fl">
+                  <a href="https://v.qq.com/x/cover/mzc00200fl55n8n/b3200fyrxfu.html" target="_blank">杨超越自曝在北京不敢上街怕认出
+                    上海认识的人少</a>
+                  <div class="info">
+                  </div>
+                </div>
+              </li>
+              <li bosszone="ycsp_3">
+                <a href="https://v.qq.com/x/cover/mzc00200fl55n8n/e3200urjcuw.html" target="_blank">[吐槽]
+                  明星也嫌房价高？杨超越：你不会以为我挣了1亿了吧</a>
+              </li>
+              <li bosszone="ycsp_4">
+                <a href="https://v.qq.com/x/cover/mzc00200fl55n8n/w3200vswzbx.html" target="_blank">[八卦]
+                  杨超越今年秋天里的第一杯奶茶竟然是他买的？</a>
+              </li>
+              <li bosszone="ycsp_5">
+                <a class="cate q-icons icon-video" href="http://v.qq.com/detail/8/85726.html"
+                  target="_blank">街角风云</a><span class="line">|</span>
+                <a href="https://v.qq.com/x/cover/mzc00200miu6k4w/s3165376u4q.html"
+                  target="_blank">没想到，最懂北京房市的人竟是换锁师傅？</a>
+              </li>
+              <li bosszone="ycsp_6">
+                <a class="cate q-icons icon-video" href="http://v.qq.com/s/videoplus/2030469535"
+                  target="_blank">商业地理</a><span class="line">|</span>
+                <a href="https://v.qq.com/x/cover/mzc00200ebkdsdl.html" target="_blank">沿海渔村全民皆主播 一年带货50亿</a>
+              </li>
+              <li bosszone="ycsp_7">
+                <a class="cate q-icons icon-video" href="https://v.qq.com/detail/8/88926.html"
+                  target="_blank">向上之路</a><span class="line">|</span>
+                <a href="https://v.qq.com/x/cover/mzc00200rxh1ne7/x3164un76xx.html" target="_blank">影帝郭晓东变身“清洁工”
+                  探秘疫情后湖北小城</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 图话 -->
+        <div class="mod m-picture" bossexpo="bg_th">
+          <div class="hd-2 cf">
+            <h2 class="tit active">
+              <a href="https://new.qq.com/ch/photo" target="_blank" bosszone="th_logo">图话</a>
+            </h2>
+          </div>
+          <div class="bd">
+            <ul class="news-list">
+              <li class="v-item news-pic-txt cf" bosszone="th_1">
+                <div class="pic fl">
+                  <a href="https://new.qq.com/rain/a/20201029A0HGFM00" target="_blank">
+                    <img src="./img/3.png" alt="00后炸串摊主因帅气走红：“粉丝多了几十万，但生意没啥起色”">
+                  </a>
+                </div>
+                <div class="txt fl">
+                  <a href="https://new.qq.com/rain/a/20201029A0HGFM00"
+                    target="_blank">00后炸串摊主因帅气走红：“粉丝多了几十万，但生意没啥起色”</a>
+                  <div class="info">
+                    <a href="https://new.qq.com/rain/a/20201029A0HGFM00" target="_blank">
+                      中国人的一天 第3840期
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="v-item" bosszone="th_2">
+                <a class="cate q-icons icon-pic" href="https://new.qq.com/omn/author/15329577"
+                  target="_blank">公益</a><span class="line">|</span>
+                <a href="https://new.qq.com/omn/20201103/20201103A012V600.html" target="_blank">70后夫妻在桑园里养鸡，供女儿读大学</a>
+              </li>
+
+              <li class="v-item" bosszone="th_1">
+                <a class="cate q-icons icon-pic" href="https://new.qq.com/omn/author/5505476"
+                  target="_blank">谷雨</a><span class="line">|</span>
+                <a href="https://new.qq.com/rain/a/20201022A04YM000" target="_blank">57岁重庆富豪破产做直播，想做下一个罗永浩</a>
+              </li>
+
+              <li class="v-item" bosszone="th_1">
+                <a class="cate q-icons icon-pic" href="http://sports.qq.com/photo/" target="_blank">体坛</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/rain/a/20201104A0886100" target="_blank">CBA网红大队又崩了！疯狂失误27次功亏一篑</a>
+              </li>
+
+              <li class="v-item" bosszone="th_1">
+                <a class="cate q-icons icon-pic" href="https://new.qq.com/omn/author/6853487"
+                  target="_blank">认真映画</a><span class="line">|</span>
+                <a href="https://new.qq.com/omn/20201019/20201019A0ERIN00" target="_blank">明星参加综艺比赛，输不起还是别来了吧</a>
+              </li>
+              <li class="v-item" bosszone="th_1">
+                <a class="cate q-icons icon-pic" href="https://new.qq.com/ch/fashion/" target="_blank">时尚圈</a><span
+                  class="line">|</span>
+                <a href="https://new.qq.com/rain/a/FAS2020110300583800" target="_blank">好物体验官|时髦潮客双十一护发指南</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- /图话 -->
+      </div>
+      <div class="col col-3 fr">
+
+        产品
+        <div id="m-product" class="m-product">
+          <ul class="list f14">
+            <li class="q-icons prod-1">
+              <a href="http://news.qq.com/mobile/" target="_blank" bosszone="cp_1_1_1">新闻APP</a>
+              <a href="http://sports.qq.com/kbsweb/" target="_blank" bosszone="cp_1_1_2">体育APP</a>
+              <a href="https://om.qq.com/userAuth/index" target="_blank" bosszone="cp_1_1_3">企鹅号</a>
+              <a href="http://kuaibao.qq.com/" target="_blank" bosszone="cp_1_1_4">快报</a>
+              <a href="http://v.qq.com/download.html#pc" target="_blank" bosszone="cp_1_1_5">视频</a>
+              <a href="https://browser.qq.com/" target="_blank" bosszone="cp_1_1_6">浏览器</a>
+              <a href="http://www.weishi.com/" target="_blank" bosszone="cp_1_1_7">微视</a>
+            </li>
+            <li class="q-icons prod-2">
+              <a href="http://weixin.qq.com/" target="_blank" bosszone="cp_1_2_1">微信</a>
+              <a href="https://im.qq.com/index.shtml" target="_blank" bosszone="cp_1_2_2">QQ</a>
+              <a href="https://qzone.qq.com/" target="_blank" bosszone="cp_1_2_3">空间</a>
+              <a href="https://work.weixin.qq.com/wework_admin/register_wx?from=regopt_tlogo_wxcbar_tengxunwang"
+                target="_blank" bosszone="cp_1_2_4">企业微信</a>
+              <a href="https://mail.qq.com/cgi-bin/loginpage" target="_blank" bosszone="cp_1_2_5">邮箱</a>
+              <a href="https://cloud.tencent.com/?fromSource=gwzcw.756432.756432.756432" target="_blank"
+                bosszone="cp_1_2_6">腾讯云</a>
+              <a href="https://guanjia.qq.com/?ADTAG=news.qqcom" target="_blank" bosszone="cp_1_2_7">电脑管家</a>
+              <a href="https://vip.qq.com/" target="_blank" bosszone="cp_1_2_8">会员</a>
+            </li>
+            <li class="q-icons prod-3">
+              <a href="http://lol.qq.com/index.shtml?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_1">LOL</a>
+              <a href="http://dnf.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_2">DNF</a>
+              <a href="http://cf.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_3">CF</a>
+              <a href="http://pvp.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_4">王者</a>
+              <a href="https://gouhuo.qq.com/?ADTAG=QQHOME" target="_blank" bosszone="cp_1_3_5">单机游戏</a>
+              <a href="http://huoying.qq.com/act/a20141009landingpage/index.htm?via=45&ADTAG=ied.neiguang&ADTAG=media.innerenter.qqcom.index_navigation"
+                target="_blank" bosszone="cp_1_3_6">火影OL</a>
+              <a href="http://wuxia.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_7">天刀</a>
+              <a href="http://iwan.qq.com/index.htm?ADTAG=media.innerenter.qqcom.indexnavigation" target="_blank"
+                bosszone="cp_1_3_8">爱玩</a>
+              <a href="http://nz.qq.com/main.shtml?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                bosszone="cp_1_3_9">逆战</a>
+            </li>
+            <li class="q-icons prod-4">
+              <a href="https://pc.qq.com/" target="_blank" bosszone="cp_1_4_1">软件</a>
+              <a href="https://pay.qq.com/" target="_blank" bosszone="cp_1_4_2">Q币</a>
+              <a href="https://www.jd.com/?utm_source=qq.com&utm_medium=cpc&utm_campaign=dmp_77&utm_term=dmp_77_11727_d604816f27c2b5e98ae51fd59de8b1c43abfdac_1538472240"
+                target="_blank" bosszone="cp_1_4_3">京东</a>
+              <a href="https://map.qq.com/#city=%D6%D0%B9%FA&wd=%D6%D0%B9%FA" target="_blank"
+                bosszone="cp_1_4_4">腾讯地图</a>
+              <a href="https://docs.qq.com/" target="_blank" bosszone="cp_1_4_5">腾讯文档</a>
+              <a href="https://qian.qq.com/?stat_data=oth87ppcsy00222&ADTAG=SCQD.BD.PC.TXDH1" target="_blank"
+                bosszone="cp_1_4_6">理财通</a>
+              <a href="http://www.qq.com/map/" class="more" target="_blank" bosszone="cp_1_4_7">全部</a>
+            </li>
+          </ul>
+          <div id="prod-more" class="prod-more">
+            <div class="prod-more-btn">
+              <div class="q-icons btn-icon">展开</div>
+            </div>
+            <ul class="list f14">
+              <li class="prod-1">
+                <a href="https://new.qq.com/omv" target="_blank" bosszone="cp_2_1_6">享看</a>
+                <a href="http://qq.pinyin.cn/" target="_blank" bosszone="cp_2_1_5">QQ拼音</a>
+                <a href="http://player.qq.com/" target="_blank" bosszone="cp_2_1_4">QQ影音</a>
+                <a href="https://pc.qq.com/detail/15/detail_755.html" target="_blank" bosszone="cp_2_1_3">QQ影像</a>
+                <a href="http://www.weiyun.com/index.html" target="_blank" bosszone="cp_2_1_2">微云</a>
+                <a href="https://fm.qq.com/" target="_blank" bosszone="cp_2_1_1">企鹅FM</a>
+              </li>
+              <li class="prod-2">
+                <a href="http://book.qq.com/?g_f=70085" target="_blank" bosszone="cp_2_2_6">QQ阅读</a>
+                <a href="https://y.qq.com/" target="_blank" bosszone="cp_2_2_5">QQ音乐</a>
+                <a href="http://kg.qq.com/" target="_blank" bosszone="cp_2_2_4">全民K歌</a>
+                <a href="http://z.qzone.com/" target="_blank" bosszone="cp_2_2_3">手机空间</a>
+                <a href="https://im.qq.com/mobileqq/" target="_blank" bosszone="cp_2_2_2">手机QQ</a>
+                <a href="https://jiasu.qq.com/?ADTAG=qqcom" target="_blank" bosszone="cp_2_2_1">网游加速器</a>
+              </li>
+              <li class="prod-3">
+                <a href="http://speed.qq.com/main.shtml?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                  bosszone="cp_2_3_7">QQ飞车</a>
+                <a href="http://yxwd.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                  bosszone="cp_2_3_6">英雄</a>
+                <a href="http://dn.qq.com/cp/a20180904ysjj/index.htm" target="_blank" bosszone="cp_2_3_5">龙之谷</a>
+                <a href="http://eafifa.qq.com/?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                  bosszone="cp_2_3_4">FIFA</a>
+                <a href="http://hdl.qq.com/index.shtml?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                  bosszone="cp_2_3_3">魂斗罗</a>
+                <a href="http://cfm.qq.com/cp/a20180927vacation/index.html" target="_blank" bosszone="cp_2_3_2">CF手游</a>
+                <a href="http://tlbb.qq.com/main.shtml?ADTAG=media.innerenter.qqcom.index_navigation" target="_blank"
+                  bosszone="cp_2_3_1">天龙手游</a>
+              </li>
+              <li class="prod-4">
+                <a href="http://xing.qq.com/" target="_blank" bosszone="cp_2_4_7">星钻</a>
+                <a href="https://888.qq.com/?bc_tag=10161.1.1" target="_blank" bosszone="cp_2_4_6">QQ彩票</a>
+                <a href="http://cb.qq.com/?attach=200_1000_10090&QQ_from=200_1000_10090" target="_blank"
+                  bosszone="cp_2_4_5">彩贝</a>
+                <a href="http://time.qq.com/?pgv_ref=qqcom" target="_blank" bosszone="cp_2_4_4">时光画轴</a>
+                <a href="https://tianqi.qq.com/" target="_blank" bosszone="cp_2_4_3">天气</a>
+                <a href="http://users.qq.com/" target="_blank" bosszone="cp_2_4_2">用户社区</a>
+                <a href="https://dreamreader.qq.com/" target="_blank" bosszone="cp_2_4_1">海豚智音</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 热门赛事 -->
+        <div class="mod m-match" bossexpo="bg_rmss">
+          <div class="hd cf">
+            <h2 class="tit active fl">
+              <a href="http://kbs.sports.qq.com/#hot" target="_blank" bosszone="rmss_logo">热门赛事</a>
+            </h2>
+            <div class="fr">
+              <a id="match-info" class="match-info" href="http://kbs.sports.qq.com/#hot" target="_blank"
+                bosszone="rmss_sc">
+                <span class="match-time"></span>
+                <span class="tit-line"></span>
+                <span class="q-icons match-txt"></span>
+              </a>
+            </div>
+          </div>
+          <div class="bd">
+            <ul class="news-list">
+              <li class="video-box click-pop-play" bosszone="rmss_1" bossvv="vv_rmss">
+                <img src="./img/5.png" alt="潘晓婷：“不务正业”的九球天后">
+                <i class="q-icons icon-play"></i>
+                <div class="desc undis">t1436jrhfi1</div>
+                <a class="txt" href="https://v.qq.com/x/cover/mzc00200wkwoygq/i0034mig8ru.html"
+                  target="_blank">潘晓婷：“不务正业”的九球天后</a>
+                <div id="mod-player1" class="mod-player" data-vid="t1436jrhfi1"
+                  data-url="https://v.qq.com/x/cover/mzc00200wkwoygq/i0034mig8ru.html"></div>
+                <div class="click-layer"></div>
+              </li>
+              <li bosszone="rmss_2">
+                <a class="q-icons icon-video" href="https://view.inews.qq.com/a/20201104A00SBA00"
+                  target="_blank">欧冠-皇马3-2险胜国米 拉莫斯达成百球里程碑</a>
+              </li>
+              <li bosszone="rmss_3">
+                <a class="q-icons icon-video" href="https://new.qq.com/rain/a/20201104A011JG00"
+                  target="_blank">NBA新赛季常规赛是72场还是60场？球员将投票表决</a>
+              </li>
+              <li bosszone="rmss_4">
+                <a class="q-icons icon-video" href="https://new.qq.com/rain/a/20201104A02O8600"
+                  target="_blank">马拉多纳浴室跌倒致脑部血肿 曾与家人争吵拒手术</a>
+              </li>
+              <li bosszone="rmss_5">
+                <a class="q-icons icon-video" href="https://new.qq.com/rain/a/20201104V0CGTD00"
+                  target="_blank">中国模仿帝还原京粤大战争议时刻 这动作不该出现在球场</a>
+              </li>
+              <li bosszone="rmss_6">
+                <a class="q-icons icon-video" href="https://new.qq.com/rain/a/SPO2020110401587500"
+                  target="_blank">《对话英超》第五期 托马斯：盼率阿森纳加冕英超</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 今日热播 -->
+        <div class="mod m-todayhot" bossexpo="bg_jrrb">
+          <div class="hd-2 cf">
+            <h2 class="tit active fl">
+              <a href="https://v.qq.com/" target="_blank" bosszone="jrrb_logo">今日热播</a>
+            </h2>
+          </div>
+          <div class="bd">
+            <ul class="news-list cf">
+              <li class="video-item fl">
+                <div class="pic video-box click-drag-play" bosszone="jrrb_1" bossvv="vv_jrrb">
+                  <img src="./img/6.jpg" alt="探访维也纳恐袭华人遇害地">
+                  <i class="q-icons icon-play2"></i>
+                  <div class="txt">探访维也纳恐袭华人遇害地</div>
+                  <div class="desc undis">t32000jv7vu</div>
+                  <div id="mod-player2" class="mod-player" data-vid="t32000jv7vu"
+                    data-url="https://view.inews.qq.com/a/20201104V00X4H00"></div>
+                  <div class="click-layer"></div>
+                </div>
+              </li>
+              <li class="video-item fr">
+                <div class="pic video-box click-drag-play" bosszone="jrrb_2" bossvv="vv_jrrb">
+                  <img src="./img/7.jpg" alt="网友盛赞康辉创口播超长历史">
+                  <i class="q-icons icon-play2"></i>
+                  <div class="txt">网友盛赞康辉创口播超长历史</div>
+                  <div class="desc undis">e3200kjg507</div>
+                  <div id="mod-player3" class="mod-player" data-vid="e3200kjg507"
+                    data-url="https://new.qq.com/omn/20201104/20201104V02KPB00.html"></div>
+                  <div class="click-layer"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="news-list">
+              <li class="item" bosszone="jrrb_3">
+                <a href="https://new.qq.com/omn/20201103/20201103V0ITGB00.html"
+                  target="_blank">湖北一河水突然变绿官方回应：示踪剂所致无毒无害</a>
+              </li>
+              <li class="item" bosszone="jrrb_4">
+                <a href="https://new.qq.com/omn/20201103/20201103V0DFRV00.html" target="_blank">重庆一小区2幼童从15楼坠亡
+                  孩子父亲撞墙痛哭</a>
+              </li>
+              <li class="item" bosszone="jrrb_5">
+                <a href="https://new.qq.com/omn/20201103/20201103V0EGG300.html"
+                  target="_blank">广州动物园回应“老虎瘦成狗”：不存在营养不良</a>
+              </li>
+              <li class="item" bosszone="jrrb_6">
+                <a href="https://new.qq.com/omn/20201103/20201103V099O900.html"
+                  target="_blank">男子潜逃9年故意增重50斤：为逃避追捕暴饮暴食</a>
+              </li>
+              <li class="item" bosszone="jrrb_7">
+                <a href="https://new.qq.com/omn/20201029/20201029V04NPU00.html" target="_blank">女孩毕业后和班主任成同事
+                  老师：你怎么这么瘦了</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="index-dom-html structure-imgs" id="visual_focus_20200724"></div>
+    </div>
+
+    <div class="layout qq-gg gg-2 cf">
+      <div class="col-1 fl">
+        <div id="NEW_QQCOM_N_Width2" style="width:920px;height:90px;" class="l_qq_com"></div>
+      </div>
+      <div class="col-2 fr">
+        <div id="NEW_QQCOM_N_button1" style="width:440px;height:90px;" class="l_qq_com"></div>
+      </div>
+    </div> -->
+</body>
+
+</html> 
